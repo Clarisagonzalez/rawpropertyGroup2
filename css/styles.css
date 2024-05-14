@@ -42,3 +42,29 @@ footer {
     bottom: 0;
     width: 100%;
 }
+}
+
+#property-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.property {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 15px;
+    width: 300px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.property img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.property h2 {
+    color: #FFA500;
+}
