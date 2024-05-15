@@ -8,9 +8,7 @@ body {
     line-height: 1.6;
     background-color: #689695;
 }
-p {
-    color: white;
-}
+
 header {
     background-color: #f7b26c;
     color: white;
@@ -28,7 +26,6 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
     text-decoration: none;
     font-weight: bold;
 }
@@ -68,8 +65,4 @@ footer {
 .property img {
     width: 100%;
     border-radius: 5px;
-}
-
-.property h2 {
-    color: #FFA500;
 }
