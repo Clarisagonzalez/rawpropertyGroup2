@@ -1,17 +1,21 @@
+
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     line-height: 1.6;
+    background-color: #689695;
 }
-
+p {
+    color: white;
+}
 header {
-    background-color: #FFA500;
+    background-color: #f7b26c;
     color: white;
     padding: 10px 0;
 }
-
 nav ul {
     list-style: none;
     padding: 0;
