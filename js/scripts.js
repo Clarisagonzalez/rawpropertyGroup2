@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const properties = [
-        { name: '2 story Miami Gem',
+        { name: 'Miami Getaway',
          location: 'Miami, FL',
           available: 'Yes' ,
          imagesUrl: 'images/bldg.png' ,
@@ -21,9 +21,24 @@ document.addEventListener('DOMContentLoaded', () => {
             'images/room 3.png',
             'images/room 4.png'
         ]
-        }
+    },
+    {
+        name: '2 Story Miami Gem',
+        location: 'Miami Beach, FL',
+        available: 'Yes',
+        imageUrl: 'images/oceanfront.jpg',
+        description: 'A beautiful two-story house located in the heart of Miami.',
+        images: [
+            'images/oceanfront.jpg',
+            'images/oceanfront1.jpg',
+            'images/oceanfront2.jpg', // these are just test images for now
+            'images/oceanfront3.jpg'
+
+        ]
+
+    }
     ];
-// images/bldg.png
+
     const propertyList = document.getElementById('property-list');
     propertyList.innerHTML = ''; // Clear the existing content
 
