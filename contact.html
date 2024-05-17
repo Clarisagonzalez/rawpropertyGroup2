@@ -22,7 +22,7 @@
         
         <div class="row">
             <div class="col-md-8">
-                <form action="mailto:example@rawpropertygroup.com" method="post" enctype="text/plain">
+                <form id="contact-form">
                     <div class="form-group">
                         <label for="name">Name:</label>
                         <input type="text" class="form-control" id="name" name="name" required>
@@ -37,12 +37,15 @@
                     </div>
                     <button type="submit" class="btn btn-primary">Send Message</button>
                 </form>
+                <div id="thank-you-message" class="alert alert-success mt-3" style="display:none;">
+                    Thank you, you will hear from us soon!
+                </div>
             </div>
             
             <div class="col-md-4">
                 <h2>Our Contact Information</h2>
-                <p><strong>Email:</strong> info@rawpropertygroupcorp.com</p>
-                <p><strong>Phone:</strong> (732) 406-1067</p>
+                <p><strong>Email:</strong> <a href="mailto:info@rawpropertygroupcorp.com">info@rawpropertygroupcorp.com</a></p>
+                <p><strong>Phone:</strong> <a href="tel:+17324061067">(732) 406-1067</a></p>
             </div>
         </div>
     </main>
@@ -57,5 +60,50 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!-- Load Navbar Script -->
     <script src="navbar.js"></script>
+
+    <!-- Form Validation Script -->
+    <script>
+        function validateEmail(email) {
+            var re = /\S+@\S+\.\S+/;
+            return re.test(email);
+        }
+
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+
+            if (name === "" || email === "" || message === "") {
+                alert("All fields must be filled out");
+                return false;
+            }
+            if (!validateEmail(email)) {
+                alert("Please enter a valid email address");
+                return false;
+            }
+
+            // Simulate form submission (replace this with actual submission logic)
+            // Example: Send data to server using Fetch API or AJAX
+            // fetch('/submit-form', {
+            //     method: 'POST',
+            //     headers: {
+            //         'Content-Type': 'application/json'
+            //     },
+            //     body: JSON.stringify({ name: name, email: email, message: message })
+            // }).then(response => {
+            //     if (response.ok) {
+            //         document.getElementById('thank-you-message').style.display = 'block';
+            //         document.getElementById('contact-form').reset();
+            //     }
+            // });
+
+            // For demonstration, we display the thank you message directly
+            document.getElementById('thank-you-message').style.display = 'block';
+            document.getElementById('contact-form').reset();
+            return true;
+        });
+    </script>
 </body>
 </html>
