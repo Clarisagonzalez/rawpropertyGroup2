@@ -3,36 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RawPropertyGroup</title>raw property group
-    <link rel="stylesheet" href="css/styles.css">
+    <title>RawPropertyGroup</title>
+    <!-- Bootstrap CSS-->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Tailwind CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<!--<body style="background-image: url('images/home1.png'); background-size: cover; background-position: center;"> -->
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="properties.html">Properties</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <main>
-        <div class="homepage-container"></div>
-        <h1>Welcome to Raw Property Group</h1> <!--I changed this from "Welcome to PawPropertyGroup"-->
-        <p>Discover Your Perfect Getaway!</p> <!--I changed this from "Your perfect rental property"-->
-        <div class="search-bar">
-            <input type="text" placeholder="Search...">
-            <button type="submit">Search</button>
+<body class="bg-light">
+
+    <!-- Navbar placeholder -->
+<div id="navbar-placeholder"></div>
+
+
+<!-- Image Section -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <img src="images/home1.png" alt="Home Image" class="img-fluid w-100" style="height: 200px;">
         </div>
     </div>
+</div>
+
+    <main class="container my-4">
+        <div class="text-center">
+            <h1 class="display-4 text-teal-600">Raw Property Group</h1>
+            <p class="lead">Discover Your Perfect Getaway!</p>
+            <div class="input-group mt-4">
+                <input type="text" class="form-control" placeholder="Search...">
+                <div class="input-group-append">
+                    <button class="btn btn-success" type="button">Search</button>
+                </div>
+            </div>
+        </div>
     </main>
     
-    <footer>
+    <footer class="bg-light text-center py-4">
         <p>&copy; 2024 RawPropertyGroup. All rights reserved.</p>
     </footer>
     
-    <script src="js/scripts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+        <!-- Load Navbar Script -->
+        <script src="navbar.js"></script>
 </body>
 </html>
