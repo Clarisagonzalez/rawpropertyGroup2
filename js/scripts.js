@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
          location: 'Miami, FL',
           available: 'Yes' ,
          imagesUrl: 'images/bldg.png' ,
-         description: 'A beautiful two-story house located in the heart of Miami.' ,
+         description: 'Modern apartment perfect for vacationing' ,
          images: [
             'images/bldg.png',
             'images/br 1.png',
@@ -26,14 +26,21 @@ document.addEventListener('DOMContentLoaded', () => {
         name: '2 Story Miami Gem',
         location: 'Miami Beach, FL',
         available: 'Yes',
-        imageUrl: 'images/oceanfront.jpg',
+        imageUrl: 'images/getway1.webp',
         description: 'A beautiful two-story house located in the heart of Miami.',
+    
         images: [
-            'images/oceanfront.jpg',
-            'images/oceanfront1.jpg',
-            'images/oceanfront2.jpg', // these are just test images for now
-            'images/oceanfront3.jpg'
-
+            'images/getaway1.webp',
+            'images/getaway2.webp',
+            'images/getaway3.webp',
+            'images/getaway4.webp',
+            'images/getaway5.webp',
+            'images/getaway6.webp',
+            'images/getaway7.webp',
+            'images/getaway8.webp',
+            'images/getaway9.webp',
+            'images/getaway10.webp',
+            'images/getaway11.webp'
         ]
 
     }
