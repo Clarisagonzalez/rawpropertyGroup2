@@ -8,6 +8,8 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- Tailwind CSS-->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Flatpickr CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="bg-light">
@@ -29,11 +31,20 @@
         <div class="text-center">
             <h1 class="display-4 text-teal-600">Raw Property Group</h1>
             <p class="lead">Discover Your Perfect Getaway!</p>
-            <div class="input-group mt-4">
-                <input type="text" class="form-control" placeholder="Search...">
-                <div class="input-group-append">
-                    <button class="btn btn-success" type="button">Search</button>
-                </div>
+            <div class="mt-4">
+                <form id="date-form">
+                    <div class="form-row">
+                        <div class="col">
+                            <input type="text" id="checkin" class="form-control" placeholder="Check-in Date" required>
+                        </div>
+                        <div class="col">
+                            <input type="text" id="checkout" class="form-control" placeholder="Check-out Date" required>
+                        </div>
+                        <div class="col">
+                            <button class="btn btn-success" type="submit">Check Availability</button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </main>
@@ -41,12 +52,44 @@
     <footer class="bg-light text-center py-4">
         <p>&copy; 2024 RawPropertyGroup. All rights reserved.</p>
     </footer>
-    
+    <!-- jQuery, Popper.js, Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+     <!-- Flatpickr JS -->
+     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
         <!-- Load Navbar Script -->
         <script src="navbar.js"></script>
+        
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // starts flatpickr on the check-in and check-out fields
+            flatpickr("#checkin", {
+                dateFormat: "Y-m-d",
+                minDate: "today",
+                onChange: function(selectedDates, dateStr, instance) {
+                    let checkout = document.getElementById('checkout');
+                    checkout._flatpickr.set('minDate', dateStr);
+                }
+            });
+            flatpickr("#checkout", {
+                dateFormat: "Y-m-d",
+                minDate: new Date().fp_incr(1) //  checkout date is at least 1 day after check-in
+            });
+
+            // Handle form submission
+            document.getElementById('date-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                const checkinDate = document.getElementById('checkin').value;
+                const checkoutDate = document.getElementById('checkout').value;
+                
+                //  date availability check 
+                alert(`Checking availability from ${checkinDate} to ${checkoutDate}`);
+            });
+        });
+    </script>
+
+
 </body>
 </html>
