@@ -108,3 +108,28 @@ footer {
     grid-gap: 1rem; 
     margin-top: 2rem;
 }
+
+.date-picker-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.date-picker-form input {
+    border: 2px solid #f7b26c;
+    border-radius: 5px;
+}
+
+.date-picker-form button {
+    background-color: #f7b26c;
+    border: none;
+    border-radius: 5px;
+}
+
+.date-picker-form button:hover {
+    background-color: #e19c5b;
+}
+
+.main-content {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
