@@ -1,10 +1,12 @@
 
 body {
+    font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     line-height: 1.6;
-    background-color: #ffffff;
+    background-color: #f8f9fa;
+    color: #333;
 }
 
 header {
@@ -27,7 +29,11 @@ nav ul li a {
     text-decoration: none;
     font-weight: bold;
 }
-
+.navbar-logo {
+    max-height: 60px;
+    width: auto;      
+    object-fit: contain;
+}
 main {
     padding: 20px;
     text-align: center;
@@ -43,6 +49,28 @@ footer {
     width: 100%;
 }
 
+footer p {
+    margin: 0;
+}
+h1 {
+    font-weight: 600;
+    color: #000000;
+}
+blockquote {
+    font-style: italic;
+    color: #666;
+}
+
+blockquote footer {
+    font-weight: 600;
+    color: #0056b3;
+}
+
+/* Container spacing */
+.container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
 
 #property-list {
     display: flex;
@@ -58,6 +86,13 @@ footer {
     width: 300px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: left;
+    transition: transform 0.2s;
+    display: block; /* Ensure the entire property is clickable */
+    color: inherit; /* Inherit text color */
+    text-decoration: none;
+}
+.property:hover {
+    transform: scale(1.05);
 }
 
 .property img {
@@ -67,13 +102,44 @@ footer {
 
 .navbar-logo {
     width: 100px;
-    height: 100px;
+    height: auto;
 }
+
+/* Carousel Styling */
+.carousel-inner img {
+    height: 500px;
+    object-fit: cover;
+}
+
+.carousel-indicators li {
+    background-color: #333;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #333;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+/* Media Queries */
 
 @media (max-width: 768px) {
     .navbar-logo {
-        width: 75px;
-        height: 75px;
+        max-height: 60px;
+    }
+    .carousel-inner blockquote {
+        font-size: 1rem;
+    }
+
+    h2.text-center {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .navbar-logo {
+        max-height: 100px; 
     }
 }
 
@@ -175,14 +241,4 @@ h2.text-center {
     font-size: 2.5rem;
     margin-bottom: 2rem;
     color: #333;
-}
-
-@media (max-width: 768px) {
-    .carousel-inner blockquote {
-        font-size: 1rem;
-    }
-
-    h2.text-center {
-        font-size: 2rem;
-    }
 }
