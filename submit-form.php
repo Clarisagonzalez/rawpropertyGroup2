@@ -1,14 +1,23 @@
 <?php
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $message = $_POST['message'];
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Retrieve form data
+    $name = $_POST["name"];
+    $email = $_POST["email"];
+    $message = $_POST["message"];
 
-    // Here, you can process the form data, send emails, etc.
-    echo "Form submitted successfully";
+    // Email details
+    $to = "info@rawpropertycorp.com"; // Change this to your company's email address
+    $subject = "Message from Contact Form";
+    $body = "Name: $name\nEmail: $email\n\n$message";
+
+    // Send email
+    if (mail($to, $subject, $body)) {
+        echo "Email sent successfully!";
+    } else {
+        echo "Failed to send email. Please try again later.";
+    }
 } else {
-    // Handle invalid requests
-    http_response_code(405);
-    echo "Method Not Allowed";
+    // If the request method is not POST, show an error message
+    echo "Error: Invalid request.";
 }
 ?>

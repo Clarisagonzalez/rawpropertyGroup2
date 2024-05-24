@@ -1,11 +1,10 @@
-
 body {
     font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     line-height: 1.6;
-    background-color: #f8f9fa;
+    background-color: #ffffff;
     color: #333;
 }
 
@@ -195,10 +194,15 @@ blockquote footer {
     background-color: #e19c5b;
 }
 
+.date-picker-form input:invalid {
+    border-color: red;
+}
+
 .main-content {
     padding-top: 50px;
     padding-bottom: 50px;
 }
+
 .img-fluid {
     object-fit: cover;
 }
@@ -242,3 +246,10 @@ h2.text-center {
     margin-bottom: 2rem;
     color: #333;
 }
+
+/* styling for invalid input*/
+input:invalid {
+    border: 2px solid red;
+}
+
+
