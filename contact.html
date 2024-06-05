@@ -107,7 +107,7 @@
                 document.getElementById('error-messages').innerHTML = '';
                 
                 // PHP code to send email
-                <?php
+                ?php
                 if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     $name = $_POST["name"];
                     $email = $_POST["email"];
@@ -125,7 +125,7 @@
                         echo "alert('Oops! Something went wrong. Please try again later.');";
                     }
                 }
-                ?>
+                ?
             }
         });
     </script>

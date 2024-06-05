@@ -1,17 +1,16 @@
+
 body {
     font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     line-height: 1.6;
-<<<<<<< HEAD
-    background: url('..images/light blue.png') no-repeat center center fixed;
-    background-size: cover;
-=======
-    background-color: #ffffff;
->>>>>>> fe2f8c95f069dd3e286864cedbbacaa2f94cbaa2
+    background-image: url('images/light blue.png');
     color: #333;
 }
+
+/*Main container styles */
+
 .main-container {
     background-color: rgba(255, 255, 255, 0.8); 
     padding: 20px;
@@ -23,6 +22,9 @@ header {
     color: white;
     padding: 10px 0;
 }
+
+/* Navbar styles */
+
 nav ul {
     list-style: none;
     padding: 0;
@@ -43,11 +45,15 @@ nav ul li a {
     width: auto;      
     object-fit: contain;
 }
+
+/* Main content styles */
+
 main {
     padding: 20px;
     text-align: center;
     min-height: 75vh;
 }
+/* Footer styles */
 
 footer {
     color: black;
@@ -61,10 +67,12 @@ footer {
 footer p {
     margin: 0;
 }
-h1 {
+/* Heading styles */
+h1, h2 {
     font-weight: 600;
     color: #000000;
 }
+/* Blockquote styles */
 blockquote {
     font-style: italic;
     color: #666;
@@ -75,16 +83,10 @@ blockquote footer {
     color: #0056b3;
 }
 
-/* Container spacing */
-.container {
+/* Container and property styles */
+.container, #property-list, .property {
     padding-top: 50px;
     padding-bottom: 50px;
-}
-
-#property-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
 }
 
 .property {
@@ -109,11 +111,6 @@ blockquote footer {
     border-radius: 5px;
 }
 
-.navbar-logo {
-    width: 100px;
-    height: auto;
-}
-
 /* Carousel Styling */
 .carousel-inner img {
     height: 500px;
@@ -124,8 +121,7 @@ blockquote footer {
     background-color: #333;
 }
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
+.carousel-control-prev-icon, .carousel-control-next-icon {
     background-color: #333;
     border-radius: 50%;
     padding: 10px;
@@ -183,6 +179,7 @@ blockquote footer {
     grid-gap: 1rem; 
     margin-top: 2rem;
 }
+/* Date picker form styles */
 
 .date-picker-form {
     max-width: 600px;
@@ -204,15 +201,10 @@ blockquote footer {
     background-color: #e19c5b;
 }
 
-.date-picker-form input:invalid {
-    border-color: red;
-}
-
 .main-content {
     padding-top: 50px;
     padding-bottom: 50px;
 }
-
 .img-fluid {
     object-fit: cover;
 }
@@ -256,10 +248,3 @@ h2.text-center {
     margin-bottom: 2rem;
     color: #333;
 }
-
-/* styling for invalid input*/
-input:invalid {
-    border: 2px solid red;
-}
-
-
