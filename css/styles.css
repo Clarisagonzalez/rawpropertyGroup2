@@ -1,12 +1,15 @@
-
 body {
     font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     line-height: 1.6;
+<<<<<<< HEAD
     background: url('..images/light blue.png') no-repeat center center fixed;
     background-size: cover;
+=======
+    background-color: #ffffff;
+>>>>>>> fe2f8c95f069dd3e286864cedbbacaa2f94cbaa2
     color: #333;
 }
 .main-container {
@@ -201,10 +204,15 @@ blockquote footer {
     background-color: #e19c5b;
 }
 
+.date-picker-form input:invalid {
+    border-color: red;
+}
+
 .main-content {
     padding-top: 50px;
     padding-bottom: 50px;
 }
+
 .img-fluid {
     object-fit: cover;
 }
@@ -248,3 +256,10 @@ h2.text-center {
     margin-bottom: 2rem;
     color: #333;
 }
+
+/* styling for invalid input*/
+input:invalid {
+    border: 2px solid red;
+}
+
+
