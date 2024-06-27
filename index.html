@@ -12,6 +12,45 @@
     <link href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        header {
+            position: relative;
+            height: 50vh;
+            overflow: hidden;
+        }
+
+        header video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: 0;
+            transform: translate(-50%, -50%);
+        }
+
+        header .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.3); /* Optional: Adds a dark overlay for better text visibility */
+            z-index: 1;
+        }
+
+        header .header-content {
+            position: relative;
+            z-index: 2;
+            color: #fff;
+            text-align: center;
+            padding-top: 20vh;
+        }
+    </style>
+</head>
+<body>
     
 </head>
 <body>
@@ -19,26 +58,25 @@
     <!-- Navbar placeholder -->
 <div id="navbar-placeholder"></div>
 
+<!-- Header Section with Video -->
+<header>
+    <video autoplay loop muted>
+        <source src="videos/miami yellow.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="overlay"></div>
+    <div class="header-content">
+        <h1>Welcome to Raw Property Group</h1>
+        <p>Your perfect getaway starts here.</p>
+    </div>
+</header>
+
 <!-- Main Container -->
 <div class="main-container container my-4">
-
-<!-- Image Section -->
-<div class="container-fluid">
-    <div class="row">
-        <div class="col">
-            <img src="images/beach.jpg" alt="Home Image" class="img-fluid w-100" style="height: 200px;">
-        </div>
-    </div>
-</div>
-
     <main class="container my-4">
         <div class="text-center">
-            <div class="heading-with-images">
-                <img src="images/rp.png" alt="Raw Property" class="heading-image">
-                <img src="images/group.png" alt="Group" class="heading-image">
-            </div>
-            <div class="heading-with-images">
-                <img src="images/discover.png" alt="Raw Property" class="sub-heading-image">
+            
+          
                 
             <div class="date-picker-form mt-4">
                 <form id="date-form">
