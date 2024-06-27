@@ -148,8 +148,14 @@
                 const checkinDate = document.getElementById('checkin').value;
                 const checkoutDate = document.getElementById('checkout').value;
                 
-                //  date availability check 
-                alert(`Checking availability from ${checkinDate} to ${checkoutDate}`);
+                // Validate the input dates
+        if (!checkinDate || !checkoutDate) {
+            alert("Please enter both check-in and check-out dates.");
+            return;
+        }
+                
+                // Redirect to the properties page with query parameters
+                window.location.href = `properties.html?checkin=${checkinDate}&checkout=${checkoutDate}`;
             });
         });
     </script>
