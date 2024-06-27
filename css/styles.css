@@ -51,6 +51,7 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
+    background-color: transparent;
 }
 
 nav ul li {
@@ -290,5 +291,20 @@ h2.text-center {
 }
 
 .bg-light {
-    background-color: var(peach);
+    background-color: #b1eaf4;
+}
+
+/* Contact Page Styling */
+.contact-page {
+    background-color: #ECFDF8;
+}
+
+.heading-image {
+    width: 100%; 
+    max-width: 800px;
+    height: auto; 
+}
+
+.lead {
+    font-family:georgia, sans-serif;
 }
