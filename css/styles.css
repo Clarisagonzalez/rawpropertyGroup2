@@ -13,7 +13,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     line-height: 1.6;
-    background-color: #ffd8ac;
+    background-color: #ecfdf8;
     color: #333;
 }
 
@@ -25,12 +25,6 @@ body {
     border-radius: 10px;
 }
 
-header {
-    background-color: #f7b26c;
-    color: white;
-    padding: 10px 0;
-    border-radius: 10px
-}
 .heading-image {
     max-width: 100%;
     height: auto;

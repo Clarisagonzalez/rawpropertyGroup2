@@ -13,10 +13,12 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
     <style>
+         
         header {
             position: relative;
-            height: 50vh;
+            height: 100vh;
             overflow: hidden;
+            
         }
 
         header video {
@@ -37,17 +39,48 @@
             bottom: 0;
             left: 0;
             right: 0;
-            background: rgba(0, 0, 0, 0.3); /* Optional: Adds a dark overlay for better text visibility */
+            background: rgba(0, 0, 0, 0.3); /*  this adds a dark overlay for better text visibility */
             z-index: 1;
         }
 
         header .header-content {
-            position: relative;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             z-index: 2;
             color: #fff;
             text-align: center;
-            padding-top: 20vh;
+            width: 100%;
         }
+
+        .header-content .date-picker-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .header-content .form-control {
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .header-content .btn-success {
+            border-radius: 5px;
+            background-color: #9f8c6d;
+            border: none;
+            width: 100%;
+        }
+
+        .header-content .btn-success:hover {
+            background-color: #218838;
+        }
+        footer {
+            background-color: #343a40; 
+            color: #fff; 
+            padding: 10; 
+            text-align: center;
+        }
+        
     </style>
 </head>
 <body>
@@ -61,52 +94,44 @@
 <!-- Header Section with Video -->
 <header>
     <video autoplay loop muted>
-        <source src="videos/miami yellow.mp4" type="video/mp4">
+        <source src="videos/miami-yellow.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
     <div class="overlay"></div>
     <div class="header-content">
         <h1>Welcome to Raw Property Group</h1>
         <p>Your perfect getaway starts here.</p>
+        <div class="date-picker-form">
+            <form id="date-form">
+                <div class="form-row">
+                    <div class="col">
+                        <input type="text" id="checkin" class="form-control" placeholder="Check-in Date" required>
+                    </div>
+                    <div class="col">
+                        <input type="text" id="checkout" class="form-control" placeholder="Check-out Date" required>
+                    </div>
+                    <div class="col">
+                        <button class="btn btn-success" type="submit">Check Availability</button>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
 </header>
 
-<!-- Main Container -->
-<div class="main-container container my-4">
-    <main class="container my-4">
-        <div class="text-center">
-            
-          
-                
-            <div class="date-picker-form mt-4">
-                <form id="date-form">
-                    <div class="form-row">
-                        <div class="col">
-                            <input type="text" id="checkin" class="form-control" placeholder="Check-in Date" required>
-                        </div>
-                        <div class="col">
-                            <input type="text" id="checkout" class="form-control" placeholder="Check-out Date" required>
-                        </div>
-                        <div class="col">
-                            <button class="btn btn-success" type="submit">Check Availability</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-        </div>
-
     </main>
     </div>
-    
-    <footer class="bg-light text-center py-4">
-        <p>&copy; 2024 RawPropertyGroup. All rights reserved.</p>
+    <!-- Footer Section -->
+    <footer>
+        <div class="text-center py-1 small">
+            <p>&copy; 2024 RawPropertyGroup. All rights reserved.</p>
+        </div>
     </footer>
     <!-- jQuery, Popper.js, Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/93f0cca896.js" crossorigin="anonymous"></script>
      <!-- Flatpickr JS -->
      <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
@@ -134,9 +159,15 @@
                 event.preventDefault();
                 const checkinDate = document.getElementById('checkin').value;
                 const checkoutDate = document.getElementById('checkout').value;
+
+                // Validate the input dates
+        if (!checkinDate || !checkoutDate) {
+            alert("Please enter both check-in and check-out dates.");
+            return;
+        }
                 
-                //  date availability check 
-                alert(`Checking availability from ${checkinDate} to ${checkoutDate}`);
+                // Redirect to the properties page with query parameters
+                window.location.href = `properties.html?checkin=${checkinDate}&checkout=${checkoutDate}`;
             });
         });
     </script>
