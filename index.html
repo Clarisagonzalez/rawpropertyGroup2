@@ -15,7 +15,7 @@
     <style>
         header {
             position: relative;
-            height: 50vh;
+            height: 100vh;
             overflow: hidden;
         }
 
@@ -37,16 +37,40 @@
             bottom: 0;
             left: 0;
             right: 0;
-            background: rgba(0, 0, 0, 0.3); /* Optional: Adds a dark overlay for better text visibility */
+            background: rgba(0, 0, 0, 0.3); /*  this adds a dark overlay for better text visibility */
             z-index: 1;
         }
 
         header .header-content {
-            position: relative;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             z-index: 2;
             color: #fff;
             text-align: center;
-            padding-top: 20vh;
+            width: 100%;
+        }
+
+        .header-content .date-picker-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .header-content .form-control {
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .header-content .btn-success {
+            border-radius: 5px;
+            background-color: #9f8c6d;
+            border: none;
+            width: 100%;
+        }
+
+        .header-content .btn-success:hover {
+            background-color: #218838;
         }
     </style>
 </head>
@@ -61,41 +85,30 @@
 <!-- Header Section with Video -->
 <header>
     <video autoplay loop muted>
-        <source src="videos/miami yellow.mp4" type="video/mp4">
+        <source src="videos/miami-yellow.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
     <div class="overlay"></div>
     <div class="header-content">
         <h1>Welcome to Raw Property Group</h1>
         <p>Your perfect getaway starts here.</p>
+        <div class="date-picker-form">
+            <form id="date-form">
+                <div class="form-row">
+                    <div class="col">
+                        <input type="text" id="checkin" class="form-control" placeholder="Check-in Date" required>
+                    </div>
+                    <div class="col">
+                        <input type="text" id="checkout" class="form-control" placeholder="Check-out Date" required>
+                    </div>
+                    <div class="col">
+                        <button class="btn btn-success" type="submit">Check Availability</button>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
 </header>
-
-<!-- Main Container -->
-<div class="main-container container my-4">
-    <main class="container my-4">
-        <div class="text-center">
-            
-          
-                
-            <div class="date-picker-form mt-4">
-                <form id="date-form">
-                    <div class="form-row">
-                        <div class="col">
-                            <input type="text" id="checkin" class="form-control" placeholder="Check-in Date" required>
-                        </div>
-                        <div class="col">
-                            <input type="text" id="checkout" class="form-control" placeholder="Check-out Date" required>
-                        </div>
-                        <div class="col">
-                            <button class="btn btn-success" type="submit">Check Availability</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-        </div>
 
     </main>
     </div>
