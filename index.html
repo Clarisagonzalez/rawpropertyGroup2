@@ -13,10 +13,12 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
     <style>
+         
         header {
             position: relative;
             height: 100vh;
             overflow: hidden;
+            
         }
 
         header video {
@@ -72,6 +74,13 @@
         .header-content .btn-success:hover {
             background-color: #218838;
         }
+        footer {
+            background-color: #343a40; 
+            color: #fff; 
+            padding: 10; 
+            text-align: center;
+        }
+        
     </style>
 </head>
 <body>
@@ -112,14 +121,17 @@
 
     </main>
     </div>
-    
-    <footer class="bg-light text-center py-4">
-        <p>&copy; 2024 RawPropertyGroup. All rights reserved.</p>
+    <!-- Footer Section -->
+    <footer>
+        <div class="text-center py-1 small">
+            <p>&copy; 2024 RawPropertyGroup. All rights reserved.</p>
+        </div>
     </footer>
     <!-- jQuery, Popper.js, Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/93f0cca896.js" crossorigin="anonymous"></script>
      <!-- Flatpickr JS -->
      <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
@@ -147,7 +159,7 @@
                 event.preventDefault();
                 const checkinDate = document.getElementById('checkin').value;
                 const checkoutDate = document.getElementById('checkout').value;
-                
+
                 // Validate the input dates
         if (!checkinDate || !checkoutDate) {
             alert("Please enter both check-in and check-out dates.");

@@ -25,12 +25,6 @@ body {
     border-radius: 10px;
 }
 
-header {
-    background-color: #f7b26c;
-    color: white;
-    padding: 10px 0;
-    border-radius: 10px
-}
 .heading-image {
     max-width: 100%;
     height: auto;
