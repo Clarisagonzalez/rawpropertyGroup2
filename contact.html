@@ -12,8 +12,6 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="bg-light">
-
-
     <!-- Navbar Placeholder -->
     <div id="navbar-placeholder"></div>
 
@@ -21,12 +19,13 @@
         <div class="text-center mb-4">
             <div class="heading-with-images">
                 <img src="images/contact.png" alt="Raw Property" class="heading-image">
-            <p class="lead">We'd love to hear from you! Please fill out the form below and we will get in touch with you shortly.<br><small class="text-muted">* indicates a required field</small></p>
+                <p class="lead">We'd love to hear from you! Please fill out the form below and we will get in touch with you shortly.<br><small class="text-muted">* indicates a required field</small></p>
+            </div>
         </div>
-        
+
         <div class="row">
             <div class="col-md-8">
-                <form id="contact-form" method="post">
+                <form id="contact-form">
                     <div class="form-group">
                         <label for="name">Name: *</label>
                         <input type="text" class="form-control" id="name" name="name" required>
@@ -46,7 +45,7 @@
                     Thank you, you will hear from us soon!
                 </div>
             </div>
-            
+
             <div class="col-md-4">
                 <h2>Our Contact Information</h2>
                 <p><strong>Email:</strong> <a href="mailto:info@rawpropertycorp.com">info@rawpropertycorp.com</a></p>
@@ -65,7 +64,13 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!-- Load Navbar Script -->
     <script src="navbar.js"></script>
-
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("nmDFBlLUuOkJyxGWt");
+        })();
+    </script>
     <!-- Form Validation Script -->
     <script>
         function validateEmail(email) {
@@ -107,27 +112,20 @@
                 document.getElementById('error-messages').innerHTML = '<div class="alert alert-danger">' + errorMessage + '</div>';
             } else {
                 document.getElementById('error-messages').innerHTML = '';
-                
-                // PHP code to send email
-                ?php
-                if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                    $name = $_POST["name"];
-                    $email = $_POST["email"];
-                    $message = $_POST["message"];
-                
-                    // Send email
-                    $to = "info@rawpropertygroupcorp.com";
-                    $subject = "Message from Contact Form";
-                    $body = "Name: $name\nEmail: $email\n\n$message";
-                
-                    if (mail($to, $subject, $body)) {
-                        echo "document.getElementById('thank-you-message').style.display = 'block';";
-                        echo "document.getElementById('contact-form').reset();";
-                    } else {
-                        echo "alert('Oops! Something went wrong. Please try again later.');";
-                    }
-                }
-                ?
+
+                // Send the email using EmailJS
+                emailjs.send('service_rawproperty', 'template_oq43pdr', {
+                    name: name,
+                    email: email,
+                    message: message
+                }).then(function(response) {
+                    console.log('Email sent successfully:', response.status, response.text);
+                    document.getElementById('thank-you-message').style.display = 'block';
+                    document.getElementById('contact-form').reset();
+                }, function(error) {
+                    console.error('Failed to send email:', error);
+                    document.getElementById('error-messages').innerHTML = '<div class="alert alert-danger">Failed to send email. Please try again later.</div>';
+                });
             }
         });
     </script>
