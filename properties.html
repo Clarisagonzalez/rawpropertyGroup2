@@ -4,32 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Properties - RawPropertyGroup</title>
+    <!-- Meta Description -->
+    <meta name="description" content="Discover beautiful properties with RawPropertyGroup. Find your dream home with us today.">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://kit.fontawesome.com/93f0cca896.js" crossorigin="anonymous"></script>
-
 </head>
 <body>
-
     <!-- Navbar Placeholder -->
     <div id="navbar-placeholder"></div>
 
     <main class="container my-5">
-        <div class="heading-with-images">
+        <div class="heading-with-images text-center">
             <img src="images/properties.png" alt="Raw Property" class="heading-image">
-        <div id="property-list">
-                <a href="property1.html" class="property">
-                    <img src="images/getaway1.webp" alt="2 story Miami Gem">
-                    <h3>2 story Miami Gem</h3>
-                    <p>Beautiful 2-story house in Miami with all modern amenities.</p>
-                </a>
-            </div>
+        </div>
+        <div class="row d-flex justify-content-center" id="property-list">
+            <!-- Properties will be injected here by JavaScript -->
+        </div>
     </main>
-      <!-- Customer Testimonials Section -->
-      <div class="my-5">
+
+    <!-- Customer Testimonials Section -->
+    <div class="my-5">
         <h2 class="text-center">What Our Guests Say</h2>
         <div id="testimonialCarousel" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
@@ -37,7 +35,7 @@
                     <blockquote class="blockquote text-center">
                         <p class="mb-0">"The house is super comfortable and meets all the needs of a large family.
                             Full kitchen, comfortable bedrooms and bathrooms.
-                            The owners were great, attentive and responded very quickly when asked" - Juliana</p>
+                            The owners were great, attentive and responded very quickly when asked." - Juliana</p>
                     </blockquote>
                 </div>
                 <div class="carousel-item">
@@ -45,12 +43,11 @@
                         <p class="mb-0">"It was a very pleasant stay for me and my guests, no lies told about the property and very responsive. 100% recommended for anyone visiting Miami!"
                             - Anthony
                         </p>
-                        
                     </blockquote>
                 </div>
                 <div class="carousel-item">
                     <blockquote class="blockquote text-center">
-                        <p class="mb-0">"Great location, close to MIA, South beach, major stores and highway. The host respond promptly to all inquiries." -Apinya</p>
+                        <p class="mb-0">"Great location, close to MIA, South beach, major stores and highway. The host responds promptly to all inquiries." - Apinya</p>
                     </blockquote>
                 </div>
             </div>
@@ -63,7 +60,8 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
-    
+    </div>
+
     <footer class="bg-light text-center py-4">
         <p>&copy; 2024 RawPropertyGroup. All rights reserved.</p>
     </footer>
@@ -75,7 +73,5 @@
 
     <!-- Load Navbar Script -->
     <script src="navbar.js"></script>
-
-
 </body>
 </html>

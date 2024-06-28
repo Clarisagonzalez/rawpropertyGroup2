@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
             name: 'Miami Getaway',
             location: 'Miami, FL',
             available: 'Yes',
-            imagesUrl: 'images/bldg.png',
+            imageUrl: 'images/bldg.png',
             description: 'Modern apartment perfect for vacationing',
             images: [
                 'images/bldg.png',
@@ -25,10 +25,10 @@ document.addEventListener('DOMContentLoaded', () => {
             link: "property1.html"
         },
         {
-            name: '2 Story Miami Gem',
+            name: 'Two Story Miami Gem',
             location: 'Miami Beach, FL',
             available: 'Yes',
-            imageUrl: 'images/getway1.webp',
+            imageUrl: 'images/getaway1.webp',
             description: 'A beautiful two-story house located in the heart of Miami.',
             images: [
                 'images/getaway1.webp',
@@ -49,38 +49,45 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const propertyList = document.getElementById('property-list');
     propertyList.innerHTML = ''; 
-    properties.forEach(property => {
+    properties.forEach((property, propertyIndex) => {
+        const carouselId = `carousel-${propertyIndex}`;
         const propertyDiv = document.createElement('div');
-        propertyDiv.classList.add('property');
+        propertyDiv.classList.add('col-md-4', 'mb-4');
         propertyDiv.innerHTML = `
-            <a href="${property.link}">
-                <h2>${property.name}</h2>
-                <p>Location: ${property.location}</p>
-                <p>Available: ${property.available}</p>
-                <p>${property.description}</p>
-                <div class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        ${property.images.map((_, index) => `
-                            <li data-target="#carousel-${index}" data-slide-to="${index}" class="${index === 0 ? 'active' : ''}"></li>
-                        `).join('')}
-                    </ol>
-                    <div class="carousel-inner">
-                        ${property.images.map((image, index) => `
-                            <div class="carousel-item ${index === 0 ? 'active' : ''}">
-                                <img src="${image}" class="d-block w-100" alt="${property.name}">
-                            </div>
-                        `).join('')}
+            <div class="card">
+                <a href="${property.link}" class="property">
+                    <div class="card-body">
+                        <h5 class="card-title">${property.name}</h5>
                     </div>
-                    <a class="carousel-control-prev" href="#carousel-${property.name.replace(/\s+/g, '-').toLowerCase()}" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carousel-${property.name.replace(/\s+/g, '-').toLowerCase()}" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </div>
-            </a>
+                    <div id="${carouselId}" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            ${property.images.map((_, index) => `
+                                <li data-target="#${carouselId}" data-slide-to="${index}" class="${index === 0 ? 'active' : ''}"></li>
+                            `).join('')}
+                        </ol>
+                        <div class="carousel-inner">
+                            ${property.images.map((image, index) => `
+                                <div class="carousel-item ${index === 0 ? 'active' : ''}">
+                                    <img src="${image}" class="d-block w-100" alt="${property.name}">
+                                </div>
+                            `).join('')}
+                        </div>
+                        <a class="carousel-control-prev" href="#${carouselId}" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#${carouselId}" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Location: ${property.location}</p>
+                        <p class="card-text">Available: ${property.available}</p>
+                        <p class="card-text">${property.description}</p>
+                    </div>
+                </a>
+            </div>
         `;
         propertyList.appendChild(propertyDiv);
     });
