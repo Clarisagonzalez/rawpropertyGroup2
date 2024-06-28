@@ -1,14 +1,13 @@
 :root {
     --orange: #f88300;
     --darkblue: #3c3f99;
-    --peach: #ffd8ac;
     --light-background: rgba(255,255,255, 0.8);
     
 }
 
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -161,6 +160,7 @@ h1, h2 {
 }
 
 .about-us-content {
+    font-family:'Poppins', sans-serif;
     flex: 1;
     padding-right: 2rem;
     font-size: 1.1rem;
@@ -175,11 +175,11 @@ h1, h2 {
 .about-us-images img {
     width: 100%;
     margin-bottom: 2rem;
-    border: 20px solid #ffd8ac;
+    border: 10px solid #9f8c6d;
     border-radius: 55px;
 }
 .custom-about-style {
-    background-color: var(--peach);
+    background-color: #9f8c6d;
     padding: 20px;
     border-radius: 55px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -190,6 +190,7 @@ h1, h2 {
 }
 
 .custom-about-style p {
+    font-family: 'Poppins', sans-serif;
     font-size: 1.2rem;
     color: var(--darkblue);
     margin-top: 6rem;
@@ -212,27 +213,7 @@ h1, h2 {
     grid-gap: 1rem; 
     margin-top: 2rem;
 }
-/* Date picker form styles */
 
-.date-picker-form {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.date-picker-form input {
-    border: 2px solid #f7b26c;
-    border-radius: 5px;
-}
-
-.date-picker-form button {
-    background-color: #f7b26c;
-    border: none;
-    border-radius: 5px;
-}
-
-.date-picker-form button:hover {
-    background-color: #e19c5b;
-}
 
 .main-content {
     padding-top: 50px;
