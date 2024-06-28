@@ -39,13 +39,11 @@ body {
 }
 
 /* Navbar styles */
-
 nav ul {
     list-style: none;
     padding: 0;
     display: flex;
     justify-content: center;
-    background-color: transparent;
 }
 
 nav ul li {
@@ -295,10 +293,19 @@ h2.text-center {
 
 .heading-image {
     width: 100%; 
-    max-width: 800px;
+    max-width: 600px;
     height: auto; 
 }
 
 .lead {
-    font-family:georgia, sans-serif;
+    font-family:'Lucida Sans Unicode';
+    font-weight: lighter;
+}
+
+.col-md-4 {
+    font-family:'Lucida Sans Unicode';
+}
+
+.col-md-8 {
+    font-family:'Lucida Sans Unicode';
 }
