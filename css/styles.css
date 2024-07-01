@@ -12,7 +12,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     line-height: 1.6;
-    background-color: #ecfdf8;
+    background-color: rgba(231, 244, 247, 0.779);
     color: #333;
 }
 
@@ -297,3 +297,16 @@ h2.text-center {
     max-width: 900px;
     height: auto;
 }
+
+/* Style for the name images */
+.card .card-title img {
+    width: auto;
+    height: 500%;
+    
+}
+
+/* Optional: Add padding or margin adjustments if needed */
+.card .card-title {
+    padding: 2px 0;
+}
+

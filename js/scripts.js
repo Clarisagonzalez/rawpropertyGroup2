@@ -22,7 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 'images/room 3.png',
                 'images/room 4.png'
             ],
-            link: "property1.html"
+            link: "property1.html",
+            imageName: 'images/miami_getaway_name.png'
         },
         {
             name: 'Two Story Miami Gem',
@@ -43,7 +44,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 'images/getaway10.webp',
                 'images/getaway11.webp'
             ],
-            link: "property2.html"
+            link: "property2.html",
+            imageName: 'images/two_story_miami_gem_name.png'
         }
     ];
 
@@ -57,7 +59,9 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="card">
                 <a href="${property.link}" class="property">
                     <div class="card-body">
-                        <h5 class="card-title">${property.name}</h5>
+                        <h5 class="card-title">
+                            <img src="${property.imageName}" alt="${property.name}" class="d-block w-100">
+                        </h5>
                     </div>
                     <div id="${carouselId}" class="carousel slide" data-ride="carousel">
                         <ol class="carousel-indicators">
