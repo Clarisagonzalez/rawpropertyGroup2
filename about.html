@@ -12,7 +12,27 @@
     <script src="https://kit.fontawesome.com/93f0cca896.js" crossorigin="anonymous"></script>
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+
     
+    
+         /* Additional styles for the card-deck */
+         .card-deck {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem; /* Adjust gap between cards */
+        }
+
+        .card {
+            flex: 1 0 300px; /* Flex basis for responsive card width */
+            max-width: 300px; /* Maximum width for cards */
+        }
+
+        .card-body {
+            text-align: center;
+        }
+    </style>
 </head>
 <body class="bg-light full-height d-flex flex-column">
 
@@ -28,6 +48,10 @@
             <p class="lead" >Meet Raw Property Group, your friendly and welcoming Airbnb host! With years of experience in hospitality and a passion for travel, we are committed to making your stay in our homes a memorable one.</p>
             <p class="lead">As local experts, we are happy to offer personalized recommendations on the best places to eat, drink, and explore in our vibrant neighborhoods. We take pride in maintaining a spotless and well-appointed space, complete with thoughtful touches.</p>
             <p class="lead">Whether you're visiting for business or pleasure, we will go above and beyond to ensure that you feel at home during your stay!</p>
+            <p class="lead text-center">
+                We first started on Airbnb, crafting unique stays tailored to both business and leisure travelers. Feel free to explore our curated listings and book your stay today.
+                <br>
+                <a href="https://www.airbnb.ca/rooms/871972481117887275?source_impression_id=p3_1719954040_P37PmYVbx4kB8RbC" target="_blank" class="btn btn-primary mt-3">Book Now</a>
         </div>
 
         <div class="about-us-images">
@@ -41,35 +65,32 @@
             </video>
     </div>
     
-        
-        <div class="row additional-sections justify-content-center">
-            <div class="col-md-4">
-                <div class="card">
+    
+    <div class="additional-sections mt-5">
+        <div class="row justify-content-center">
+            <div class="card-deck">
+                <div class="card shadow-sm">
                     <div class="card-body text-center">
                         <h2><i class="fas fa-clock"></i></h2>
-                        <p>Our team is dedicated to delivering the best customer service quickly and efficiently.</p>
+                        <p class="card-text">Our team is dedicated to delivering the best customer service quickly and efficiently.</p>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
+                <div class="card shadow-sm">
                     <div class="card-body text-center">
                         <h2><i class="fas fa-map-marker-alt"></i></h2>
-                        <p>Our listings are located in the most vibrant neighborhoods, providing easy access to local attractions.</p>
+                        <p class="card-text">Our listings are located in the most vibrant neighborhoods, providing easy access to local attractions.</p>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
+                <div class="card shadow-sm">
                     <div class="card-body text-center">
                         <h2><i class="fas fa-thumbs-up"></i></h2>
-                        <p>With over hundreds of stays, we take pride in our positive reviews and strive to exceed guest expectations.</p>
+                        <p class="card-text">With over hundreds of stays, we take pride in our positive reviews and strive to exceed guest expectations.</p>
                     </div>
                 </div>
             </div>
         </div>
-    </main>
-
+    </div>
+</main>
     <footer class="bg-light text-center py-4">
         <p>&copy; 2024 RawPropertyGroup. All rights reserved.</p>
     </footer>

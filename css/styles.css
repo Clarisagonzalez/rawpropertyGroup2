@@ -14,7 +14,25 @@ body {
     line-height: 1.6;
     background-color: rgba(231, 244, 247, 0.779);
     color: #333;
+    min-height: 100vh;
 }
+.additional-sections {
+    min-height: 50vh; /* Set minimum height to full viewport height */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: flex-start; /* Center vertically */
+    padding: 3rem; /* Adjust padding as needed */
+}
+
+.additional-sections .card {
+    margin-bottom: 20px; /* Adjust margin between cards */
+}
+
+.card-deck {
+    max-width: 1000px; /* Set maximum width for card deck */
+}
+
+
 
 /*Main container styles */
 
@@ -145,13 +163,14 @@ h1, h2 {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 2rem;
+
 }
 
 .about-us-content, .custom-about-style {
     font-family:'Poppins', sans-serif;
     font-size: 1.1rem;
     max-width: 600px; 
-    max-height: 800px; 
+    max-height: 1000px; 
     background-color: #6F8FAF; 
     padding: 20px;
     border-radius: 55px;
@@ -215,7 +234,11 @@ h1, h2 {
     grid-gap: 1rem; 
     margin-top: 2rem;
 }
-
+.btn-primary {
+    background-color: #9f8c6d; 
+    border-color: #9f8c6d;
+    color: #fff; 
+}
 
 .main-content {
     padding-top: 50px;
