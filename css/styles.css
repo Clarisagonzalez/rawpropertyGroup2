@@ -1,6 +1,7 @@
 :root {
-    --orange: #f88300;
-    --darkblue: #3c3f99;
+    --Jean: #6f8faf;
+    --tan: #9f8c6d;
+    --creamy-white: #f4f1ea;
     --light-background: rgba(255,255,255, 0.8);
     
 }
@@ -100,7 +101,7 @@ h1, h2 {
 
 .property {
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 30px;
     margin: 10px;
     padding: 15px;
     width: 300px;
@@ -117,7 +118,7 @@ h1, h2 {
 
 .property img {
     width: 100%;
-    border-radius: 5px;   
+    border-radius: 25px;   
 }
 
 /* Carousel Styling */
@@ -132,7 +133,7 @@ h1, h2 {
 
 .carousel-control-prev-icon, .carousel-control-next-icon {
     background-color: #333;
-    border-radius: 50%;
+    border-radius: 5px;
     padding: 10px;
 }
 
@@ -260,9 +261,9 @@ h1, h2 {
     margin: 0 auto;
     max-width: 600px;
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: var(--creamy-white);
     border-left: 10px ;
-    border-radius: 5px;
+    border-radius: 20px;
 }
 
 .carousel-inner .blockquote-footer {
@@ -285,16 +286,18 @@ h1, h2 {
 h2.text-center {
     font-size: 2.5rem;
     margin-bottom: 2rem;
-    color: #333;
+    color: var(--tan);
+    font-family: 'Poppins', sans-serif;
 }
 
 .bg-light {
-    background-color: #b1eaf4;
+    background-color: var(--creamy-white);
 }
 
 /* Contact Page Styling */
 .contact-page {
-    background-color: white;
+    background-color: var(--creamy-white);
+    font-family:'Poppins', sans-serif;
 }
 
 .heading-image {
@@ -304,16 +307,17 @@ h2.text-center {
 }
 
 .lead {
-    font-family:'Lucida Sans Unicode';
-    font-weight: lighter;
+    font-family:'Poppins', sans-serif;
+    font-weight: 500;
+    color:var(--Jean);
 }
 
 .col-md-4 {
-    font-family:'Lucida Sans Unicode';
+    font-family:'Poppins', sans-serif;
 }
 
 .col-md-8 {
-    font-family:'Lucida Sans Unicode';
+    font-family:'Poppins', sans-serif;
 }
 
 /*Properties Page Styling*/
@@ -335,3 +339,19 @@ h2.text-center {
     padding: 2px 0;
 }
 
+/* Customer Testimonials Section */
+#testimonialCarousel {
+    background-color: #6f8faf; 
+    color:  whitesmoke;
+    font-style: italic; 
+    padding: 2rem; 
+    margin-top: -20px;
+    height: 30vh; 
+    overflow-y: auto; 
+
+}
+
+/* Testimonial blockquote */
+.blockquote {
+    margin: 0; 
+}
