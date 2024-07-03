@@ -7,17 +7,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/93f0cca896.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <style>
         .amenities {
-            width: 50%;
-            max-width: 400px;
+            width: 100%;
+            max-width: 550px;
+            display: block;
             margin: 0 auto;
+            
         }
         .property-image {
             width: 100%;
-            max-width: 500px;
+            max-width: 525px;
             margin: 0 auto;
             display: block;
         }
@@ -25,17 +28,18 @@
             font-size: 1.1rem;
             line-height: 1.6;
             background-color: #6f8faf;
-            padding: 20px;
+            padding: 30px;
             border-radius: 15px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             color: white;
             font-style: italic;
+            margin:20px;
         }
         .property-heading {
             color: #343a40;
         }
         .carousel {
-            height: 800px; 
+            height: 780px; 
         }
         .carousel-inner, .carousel-item, .property-image {
             height: 100%;
@@ -47,23 +51,41 @@
             width: 100%;
             border-radius: 15px; 
         }
-        /* Style for the 2story image */
-        .header-image {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 20px;
+        .header-content {
+            text-align: center; 
         }
-        
+        .header-image {
+            max-width: 50%;
+            height: auto;
+            max-height: 200px; 
+            display: block; 
+            margin: 0 auto; 
+        }
+        .btn-book-now {
+            display: inline-block;
+            margin-top: 15px; /* Adjust as needed */
+        }
+        .centered-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50vh; /* Adjust based on your layout */
+        }
     </style>
 </head>
 <body>
     <!-- Navbar Placeholder -->
     <div id="navbar-placeholder"></div>
-    <div class="header-content">
-        <img src="images/2story.png" alt="two story miami gem" class="img-fluid">
 
-        <div class="row">
+     <!-- 2story Image Section -->
+     <section class="header-section">
+        <img src="images/2story.png" alt="two story miami gem" class="header-image">
+    </section>
+
+    <div class="header-content">
+       <div class="row">
             <div class="col-md-6">
+
 
         <!-- Image Carousel -->
         <div id="propertyCarousel" class="carousel slide mb-4" data-ride="carousel">
@@ -137,17 +159,21 @@
             
            <p> Located perfectly, you'll be just minutes away from Miami's best restaurants, shops, and attractions!</p> 
            </div>
-        </div>
-    </div>
         
     
-
+    <!-- Amenities Image -->
+    <div class="text-center mb-5">
             <img src="images/Amenities.png" class="img-fluid amenities" alt="Amenities">
         </div>
 
-        <div class="text-center mb-5">
-            <a href="https://www.airbnb.ca/rooms/871972481117887275?source_impression_id=p3_1719954040_P37PmYVbx4kB8RbC" target="_blank" class="btn btn-primary mt-3">Book Now</a>
+ <!-- Book Now Button -->
+        <div class="text-center mb-5 centered-container">
+            <a href="https://www.airbnb.ca/rooms/871972481117887275?source_impression_id=p3_1719954040_P37PmYVbx4kB8RbC" target="_blank" class="btn btn-primary mt-3 btn-book-now">
+                <i class="fas fa-calendar-alt mr-2"></i>Book Now</a>
         </div>
+      </div>
+   </div>
+       
         
         
     </main>

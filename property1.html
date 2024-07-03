@@ -16,6 +16,13 @@
             height: 500px; /* Adjust carousel image height */
             object-fit: cover;
         }
+        .header-image {
+            max-width: 50%;
+            height: auto;
+            max-height: 200px; 
+            display: block; 
+            margin: 0 auto; 
+        }
          /* Header and Image Styling */
         .img {
             max-width: 100%;
@@ -26,9 +33,10 @@
         }
 
         .amenities {
-            width: 50%;
-            max-width: 400px;
-            margin: 0 auto;
+            width: 100%;
+            max-width: 550px;
+            display: block;
+            margin: 0 auto
         }
         .property-image {
             width: 100%;
@@ -50,7 +58,7 @@
             color: #343a40;
         }
         .carousel {
-           max-height: 800px; 
+           max-height: 780px; 
         }
         .carousel-inner, .carousel-item, .property-image {
             height: 100%;
@@ -62,6 +70,16 @@
             width: 100%;
             border-radius: 15px; 
         }
+        .btn-book-now {
+            display: inline-block;
+            margin-top: 15px;
+        }
+        .centered-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50vh; 
+        }
     </style>
 </head>
 <body>
@@ -69,8 +87,9 @@
     <div id="navbar-placeholder"></div>
 
     <div class="header-content1">
-        <img src="images/miamigetaway.png" alt="miamigetaway">
+        <img src="images/miamigetaway.png" alt="miamigetaway" class="header-image">
 
+    <div class="header-content">
         <div class="row">
             <div class="col-md-6">
 
@@ -144,19 +163,22 @@
            <p>Upstairs, two cozy bedrooms each have private bathrooms. The master bedroom includes a second private balcony, making it perfect for families or groups of friends.</p> 
            <p>Conveniently situated, you'll be just minutes away from Miami's finest restaurants, shops, and attractions!</p> 
            </div>
-        </div>
-    </div>
-        
-           <div class="text-center"></div>
+    
+        <!-- Amenities Image -->
+    <div class="text-center mb-5">
             <img src="images/Amenities.png" class="img-fluid amenities" alt="Amenities">
         </div>
-        <div class="text-center mb-5">
-    <br>
-            <a href="https://www.airbnb.ca/rooms/871972481117887275?source_impression_id=p3_1719954040_P37PmYVbx4kB8RbC" target="_blank" class="btn btn-primary mt-3">Book Now</a>
-    
-            </main>
+
+        <!-- Book Now Button -->
+        <div class="text-center mb-5 centered-container">
+            <a href="https://www.airbnb.ca/rooms/871972481117887275?source_impression_id=p3_1719954040_P37PmYVbx4kB8RbC" target="_blank" class="btn btn-primary mt-3 btn-book-now">
+                <i class="fas fa-calendar-alt mr-2"></i>Book Now</a>
+        </div>
+      </div>
+   </div>
+      
         
-    </main>
+    
 
     <footer class="bg-light text-center py-4">
         <p>&copy; 2024 RawPropertyGroup. All rights reserved.</p>
