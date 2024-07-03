@@ -3,9 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             name: 'Miami Getaway',
             location: 'Miami, FL',
-            available: 'Yes',
             imageUrl: 'images/bldg.png',
-            description: 'Modern apartment perfect for vacationing',
             images: [
                 'images/bldg.png',
                 'images/br 1.png',
@@ -23,14 +21,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 'images/room 4.png'
             ],
             link: "property1.html",
-            imageName: 'images/miamigetaway.png'
+            imageName: 'images/miami_getaway.png'
         },
         {
             name: 'Two Story Miami Gem',
             location: 'Miami Beach, FL',
-            available: 'Yes',
             imageUrl: 'images/getaway1.webp',
-            description: 'A beautiful two-story house located in the heart of Miami.',
             images: [
                 'images/getaway1.webp',
                 'images/getaway2.webp',
@@ -45,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 'images/getaway11.webp'
             ],
             link: "property2.html",
-            imageName: 'images/2story.png'
+            imageName: 'images/TwoStory.png'
         }
     ];
 
@@ -87,8 +83,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                     <div class="card-body">
                         <p class="card-text">Location: ${property.location}</p>
-                        <p class="card-text">Available: ${property.available}</p>
-                        <p class="card-text">${property.description}</p>
+                        ${property.available ? `<p class="card-text">Available: ${property.available}</p>` : ''}
+                        ${property.description ? `<p class="card-text">${property.description}</p>` : ''}
                     </div>
                 </a>
             </div>
