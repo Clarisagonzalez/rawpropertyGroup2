@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 'images/room 4.png'
             ],
             link: "property1.html",
-            imageName: 'images/miami_getaway_name.png'
+            imageName: 'images/miamigetaway.png'
         },
         {
             name: 'Two Story Miami Gem',
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 'images/getaway11.webp'
             ],
             link: "property2.html",
-            imageName: 'images/two_story_miami_gem_name.png'
+            imageName: 'images/2story.png'
         }
     ];
 

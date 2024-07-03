@@ -10,6 +10,21 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <style>
+
+        /* Carousel Styling */
+        .carousel-inner img {
+            height: 500px; /* Adjust carousel image height */
+            object-fit: cover;
+        }
+         /* Header and Image Styling */
+        .img {
+            max-width: 100%;
+            height: auto;
+            max-height: 150px; /* Adjust maximum height of the image */
+            display: block;
+            margin: 0 auto;
+        }
+
         .amenities {
             width: 50%;
             max-width: 400px;
@@ -31,11 +46,11 @@
             color: white;
             font-style: italic;
         }
-        .property-heading {
+        .property-heading-one {
             color: #343a40;
         }
         .carousel {
-            height: 800px; 
+           max-height: 800px; 
         }
         .carousel-inner, .carousel-item, .property-image {
             height: 100%;
@@ -53,8 +68,8 @@
     <!-- Navbar Placeholder -->
     <div id="navbar-placeholder"></div>
 
-    <main class="container my-5">
-        <h1 class="text-center mb-5">Miami Getaway</h1>
+    <div class="header-content1">
+        <img src="images/miamigetaway.png" alt="miamigetaway">
 
         <div class="row">
             <div class="col-md-6">

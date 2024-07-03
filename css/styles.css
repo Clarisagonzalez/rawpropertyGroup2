@@ -13,7 +13,6 @@ body {
     box-sizing: border-box;
     line-height: 1.6;
     background-color: white;
-    color: #333;
     min-height: 100vh;
 }
 .additional-sections {
@@ -336,6 +335,11 @@ h2.text-center {
 /* Optional: Add padding or margin adjustments if needed */
 .card .card-title {
     padding: 2px 0;
+    
+}
+.card {
+    border-radius: 25px;
+
 }
 
 /* Customer Testimonials Section */
