@@ -93,8 +93,8 @@ h1, h2 {
 
 /* Container and property styles */
 .container, #property-list, .property {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 
 .property {
@@ -121,7 +121,7 @@ h1, h2 {
 
 /* Carousel Styling */
 .carousel-inner img {
-    height: 500px;
+    height: 250px;
     object-fit: cover;
 }
 
@@ -348,8 +348,8 @@ h2.text-center {
     color:  whitesmoke;
     font-style: italic; 
     padding: 2rem; 
-    margin-top: -20px;
-    height: 30vh; 
+    margin-top: 20px;
+    height: 50vh; 
     overflow-y: auto; 
     
 
