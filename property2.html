@@ -24,10 +24,30 @@
         .property-description {
             font-size: 1.1rem;
             line-height: 1.6;
+            background-color: #6f8faf;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            color: white;
+            font-style: italic;
         }
         .property-heading {
             color: #343a40;
         }
+        .carousel {
+            height: 800px; 
+        }
+        .carousel-inner, .carousel-item, .property-image {
+            height: 100%;
+            border-radius: 15px; 
+        }
+        .carousel-item img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+            border-radius: 15px; 
+        }
+        
     </style>
 </head>
 <body>
@@ -36,6 +56,10 @@
 
     <main class="container my-5">
         <h1 class="text-center mb-5">Two story Miami Gem</h1>
+
+        <div class="row">
+            <div class="col-md-6">
+
         <!-- Image Carousel -->
         <div id="propertyCarousel" class="carousel slide mb-4" data-ride="carousel">
             <ol class="carousel-indicators">
@@ -100,6 +124,7 @@
         </div>
     </div>
 
+    <div class="col-md-6">
         <div class="property-description text-center mb-5">
          <p>This gem is perfect for your Miami getaway, with ample space for up to 6 guests. Our condo boasts a spacious living area, complete with comfortable seating, a large flat-screen TV, private balcony, bathroom, and fully equipped kitchen!</p>
 
@@ -107,10 +132,18 @@
             
            <p> Located perfectly, you'll be just minutes away from Miami's best restaurants, shops, and attractions!</p> 
            </div>
+        </div>
+    </div>
         
-           <div class="text-center"></div>
+    
+
             <img src="images/Ameneties.png" class="img-fluid amenities" alt="Amenities">
         </div>
+
+        <div class="text-center mb-5">
+            <a href="https://www.airbnb.ca/rooms/871972481117887275?source_impression_id=p3_1719954040_P37PmYVbx4kB8RbC" target="_blank" class="btn btn-primary mt-3">Book Now</a>
+        </div>
+        
         
     </main>
 
