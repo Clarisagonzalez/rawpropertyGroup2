@@ -2,6 +2,7 @@
     --Jean: #6f8faf;
     --tan: #9f8c6d;
     --creamy-white: #f4f1ea;
+    --Soft-Blue: #B0C4DE;
     
 }
 
@@ -12,7 +13,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     line-height: 1.6;
-    background-color: #B0C4DE;
+    background-color: var(--Soft-Blue);
     min-height: 100vh;
 }
 /* about us pg */
