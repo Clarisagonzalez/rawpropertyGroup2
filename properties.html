@@ -17,46 +17,89 @@
     <style>
         .card {
             background-color: #6f8faf;
-            color:whitesmoke;
-
+            color: whitesmoke;
+            border-radius: 25px;
+            margin-bottom: 20px;
         }
+
+        .card-img-top {
+    max-width: 100%;
+    height: auto;
+}
+.card-body {
+    padding: 1rem;
+}
         .reviews-image {
-            max-width: 100%; 
+            max-width: 100%;
             height: auto;
             margin: 0 auto;
             display: block;
             margin-bottom: 20px;
         }
         .carousel {
-            margin-top: 10px; /* Space between the image and carousel */
+            margin-top: 10px;
+        }
+        .card .card-title img {
+            width: auto;
+            height: 500%;
+        }
+        .heading-image {
+            width: 70%;
+            max-width: 500px;
+            height: auto;
+        }
+        #testimonialCarousel {
+            background-color: #B0C4DE; 
+            color:  whitesmoke;
+            font-style: italic; 
+            padding: 2rem; 
+            margin-top: 20px;
+            height: 50vh; 
+            overflow-y: auto; 
+        }
+        .blockquote {
+            margin: 0; 
+        }
+        .carousel-inner blockquote {
+            font-size: 1.2rem;
+            font-style: italic;
+            color: #333;
+            margin: 0 auto;
+            max-width: 600px;
+            padding: 20px;
+            background-color: var(--creamy-white);
+            border-radius: 20px;
+        }
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: #eadc94;
+            border-radius: 50%;
+        }
+        /* Media Queries */
+        @media (min-width: 576px) {
+            .reviews-image {
+                max-width: 75%;
+            }
         }
         @media (min-width: 768px) {
             .reviews-image {
-                max-width: 50%; /* Adjust for larger screens */
+                max-width: 50%;
             }
         }
-            /* Media Queries for Property Cards */
-        @media (max-width: 767px) {
-            .property-card {
-                flex: 0 0 100%; /* Full width on small screens */
-                max-width: 100%;
+        .card-title {
+            font-size: 1.25rem;
+        }
+        .card-text {
+            font-size: 1rem;
+        }
+        @media (min-width: 768px) {
+            .card-title {
+                font-size: 1.5rem;
+            }
+            .card-text {
+                font-size: 1.125rem;
             }
         }
-        @media (min-width: 768px) and (max-width: 991px) {
-            .property-card {
-                flex: 0 0 48%; /* Two cards per row on medium screens */
-                max-width: 48%;
-                margin: 1%;
-            }
-        }
-        @media (min-width: 992px) {
-            .property-card {
-                flex: 0 0 30%; /* Three cards per row on large screens */
-                max-width: 30%;
-                margin: 1.5%;
-            }
-        }
-
     </style>
 </head>
 <body>
@@ -69,17 +112,9 @@
         </div>
         <div class="row d-flex justify-content-center" id="property-list">
             <!-- Properties will be injected here by JavaScript -->
-            <!-- Example Property Card -->
-            <div class="col-12 col-md-6 col-lg-4 mb-4">
-                <div class="card property-card">
-                    <img src="property-image.jpg" class="card-img-top" alt="Property Image">
-                    <div class="card-body">
-                        <h5 class="card-title">Property Title</h5>
-                        <p class="card-text">Property description goes here.</p>
-                    </div>
-                </div>
-            </div>
+        
         </div>
+
     </main>
     <!-- What Guests Are Saying Image Section -->
     <div class="text-center my-5">

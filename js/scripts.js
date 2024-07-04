@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
     properties.forEach((property, propertyIndex) => {
         const carouselId = `carousel-${propertyIndex}`;
         const propertyDiv = document.createElement('div');
-        propertyDiv.classList.add('col-md-4', 'mb-4');
+        propertyDiv.classList.add('col-md-4', 'col-sm-6', 'col-12', 'mb-4');
         propertyDiv.innerHTML = `
             <div class="card">
                 <a href="${property.link}" class="property">
