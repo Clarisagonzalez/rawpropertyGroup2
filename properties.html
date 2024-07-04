@@ -20,15 +20,24 @@
             color: whitesmoke;
             border-radius: 25px;
             margin-bottom: 20px;
+            overflow: hidden; /* Ensure content doesn't overflow */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
         }
 
         .card-img-top {
-    max-width: 100%;
-    height: auto;
-}
-.card-body {
-    padding: 1rem;
-}
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .card-body {
+            padding: 1rem;
+        }
+
         .reviews-image {
             max-width: 100%;
             height: auto;
@@ -36,18 +45,25 @@
             display: block;
             margin-bottom: 20px;
         }
+
         .carousel {
             margin-top: 10px;
         }
+
         .card .card-title img {
             width: auto;
-            height: 500%;
+            height: auto;
+            max-width: 100%;
+            display: block;
+            margin: 0 auto;
         }
+
         .heading-image {
             width: 70%;
             max-width: 500px;
             height: auto;
         }
+
         #testimonialCarousel {
             background-color: #B0C4DE; 
             color:  whitesmoke;
@@ -57,9 +73,11 @@
             height: 50vh; 
             overflow-y: auto; 
         }
+
         .blockquote {
             margin: 0; 
         }
+
         .carousel-inner blockquote {
             font-size: 1.2rem;
             font-style: italic;
@@ -70,35 +88,40 @@
             background-color: var(--creamy-white);
             border-radius: 20px;
         }
+
         .carousel-control-prev-icon,
         .carousel-control-next-icon {
             background-color: #eadc94;
             border-radius: 50%;
         }
+
         /* Media Queries */
         @media (min-width: 576px) {
             .reviews-image {
                 max-width: 75%;
             }
         }
+
         @media (min-width: 768px) {
             .reviews-image {
                 max-width: 50%;
             }
-        }
-        .card-title {
-            font-size: 1.25rem;
-        }
-        .card-text {
-            font-size: 1rem;
-        }
-        @media (min-width: 768px) {
+
             .card-title {
                 font-size: 1.5rem;
             }
+
             .card-text {
                 font-size: 1.125rem;
             }
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+        }
+
+        .card-text {
+            font-size: 1rem;
         }
     </style>
 </head>
@@ -112,10 +135,9 @@
         </div>
         <div class="row d-flex justify-content-center" id="property-list">
             <!-- Properties will be injected here by JavaScript -->
-        
         </div>
-
     </main>
+
     <!-- What Guests Are Saying Image Section -->
     <div class="text-center my-5">
         <img src="images/whatguestsays.png" alt="What our Guests are saying" class="img-fluid reviews-image">

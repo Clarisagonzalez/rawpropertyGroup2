@@ -225,7 +225,7 @@ h1, h2 {
 
 .heading-image {
     width: 100%; 
-    max-width:90px;
+    max-width:500px;
     height: auto;
 }
 
