@@ -11,29 +11,27 @@
     <!-- Flatpickr CSS -->
     <link href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
     <style>
-         
         header {
             position: relative;
             height: 100vh;
             overflow: hidden;
-            
         }
 
-        header video {
+        header video.bg-video,
+        header img.bg-image {
             position: absolute;
             top: 50%;
             left: 50%;
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            z-index: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
             transform: translate(-50%, -50%);
+            z-index: 0;
         }
 
         header .overlay {
@@ -55,7 +53,6 @@
             text-align: center;
             width: 100%;
             margin-bottom: -2rem;
-
         }
 
         .header-content h1 {
@@ -63,11 +60,13 @@
             font-size: 1.2rem;
             font-weight: 600;
             margin-bottom: 20px;
-       }
+        }
+
         .header-content p {
             font-family: 'Poppins', sans-serif;
             font-size: 1rem;
-}
+        }
+
         .header-content img {
             max-width: 60%; /* Adjust the maximum width as needed */
             height: auto;
@@ -83,11 +82,13 @@
         .header-content .form-control {
             border-radius: 20px;
             margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 20px; 
             font-size: 1rem;
             border: 1px solid #ccc;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            margin-bottom: 10px;
         }
+
         .header-content .btn-primary {
             border-radius: 20px;
             background-color: #1a3755;
@@ -109,93 +110,113 @@
             width: 100%;
         }
 
-    
         footer {
-            background-color: #343a40; 
-            color: #fff; 
-            padding: 10; 
+            background-color: var(--creamy-white); /* Replace with your desired color */
+            color: black;
+            padding: 10;
             text-align: center;
         }
-       /* Responsive styles */
-    @media (max-width: 767px) {
-    .header-content .form-row {
-        flex-direction: column; /* Stack elements vertically */
-        align-items: center; /* Center align items */
-    }
-    
-    .header-content .form-control {
-        font-size: 0.9rem; /* Adjust font size */
-        max-width: 100%; /* Ensure full width */
-    }
 
-    .header-content .btn-primary {
-        width: 100%; /* Full width */
-    }
-}
+        /* Hide video on mobile devices and show image */
+        @media (max-width: 768px) {
+            header video.bg-video {
+                display: none;
+            }
 
-        
+            header img.bg-image {
+                display: block;
+            }
+        }
+
+        /* Hide image on larger devices and show video */
+        @media (min-width: 769px) {
+            header video.bg-video {
+                display: block;
+            }
+
+            header img.bg-image {
+                display: none;
+            }
+        }
+
+        /* Responsive styles */
+        @media (max-width: 767px) {
+            .header-content .form-row {
+                flex-direction: column; /* Stack elements vertically */
+                align-items: center; /* Center align items */
+            }
+
+            .header-content .form-control {
+                font-size: 0.9rem; /* Adjust font size */
+                max-width: 100%; /* Ensure full width */
+            }
+
+            .header-content .btn-primary {
+                width: 100%; /* Full width */
+            }
+        }
     </style>
 </head>
 <body>
-    
-</head>
-<body>
-
     <!-- Navbar placeholder -->
-<div id="navbar-placeholder"></div>
+    <div id="navbar-placeholder"></div>
 
-<!-- Header Section with Video -->
-<header>
-    <video autoplay loop muted playsinline>
-        <source src="videos/skyandtrees.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    <div class="overlay"></div>
-    <div class="header-content">
-        <img src="images/WelcomeToRawPG.png" alt="Welcome to Raw Property Group">
-        <p style="margin-bottom: 20px;">Your perfect getaway starts here.</p>
-        <div class="date-picker-form">
-            <form id="date-form">
-                <div class="form-row justify-content-center">
-                    <div class="col-auto">
-                        <input type="text" id="checkin" class="form-control" placeholder="Check-in Date" required>
+    <!-- Header Section with Video -->
+    <header>
+        <video class="bg-video" autoplay loop muted playsinline>
+            <source src="videos/skyandtrees.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <img class="bg-image" src="images/skysandtrees.jpg" alt="Sky and Trees">
+        <div class="overlay"></div>
+        <div class="header-content">
+            <img src="images/WelcomeToRawPG.png" alt="Welcome to Raw Property Group">
+            <p style="margin-bottom: 20px;">Your perfect getaway starts here.</p>
+            <div class="date-picker-form">
+                <form id="date-form">
+                    <div class="form-row justify-content-center">
+                        <div class="col-auto mb-2">
+                            <input type="text" id="checkin" class="form-control" placeholder="Check-in Date" required>
+                        </div>
+                        <div class="col-auto mb-2">
+                            <input type="text" id="checkout" class="form-control" placeholder="Check-out Date" required>
+                        </div>
+                        <div class="col-auto">
+                            <button class="btn btn-primary" type="submit">Check Availability</button>
+                        </div>
                     </div>
-                    <div class="col-auto">
-                        <input type="text" id="checkout" class="form-control" placeholder="Check-out Date" required>
-                    </div>
-                    <div class="col-auto">
-                        <button class="btn btn-primary" type="submit">Check Availability</button>
-                    </div>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
-    </div>
-</header>
+    </header>
 
+    <!-- Main content -->
+    <main>
+        <!-- Your main content here -->
     </main>
-    </div>
+
     <!-- Footer Section -->
     <footer>
         <div class="text-center py-1 small">
             <p>&copy; 2024 RawPropertyGroup. All rights reserved.</p>
         </div>
     </footer>
+
     <!-- jQuery, Popper.js, Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/93f0cca896.js" crossorigin="anonymous"></script>
-     <!-- Flatpickr JS -->
-     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <!-- Flatpickr JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <!-- Load Navbar Script -->
+    <script src="navbar.js"></script>
 
-        <!-- Load Navbar Script -->
-        <script src="navbar.js"></script>
-        
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             var video = document.querySelector('header video');
-            video.muted = true;
-            video.play();
+            video.muted = true; // Ensure video is muted
+            video.play(); // Attempt to play the video
 
             // Handle autoplay policy
             var promise = video.play();
@@ -230,17 +251,15 @@
                 const checkoutDate = document.getElementById('checkout').value;
 
                 // Validate the input dates
-        if (!checkinDate || !checkoutDate) {
-            alert("Please enter both check-in and check-out dates.");
-            return;
-        }
-                
+                if (!checkinDate || !checkoutDate) {
+                    alert("Please enter both check-in and check-out dates.");
+                    return;
+                }
+
                 // Redirect to the properties page with query parameters
                 window.location.href = `properties.html?checkin=${checkinDate}&checkout=${checkoutDate}`;
             });
         });
     </script>
-
-
 </body>
 </html>

@@ -215,14 +215,6 @@ footer p {
 
 
 /* Contact Page Styling */
-.contact-page {
-    background-color: var(--creamy-white);
-    font-family:'Poppins', sans-serif;
-}
-h1, h2 {
-    font-weight: 600;
-    color: #000000;
-}
 
 .heading-image {
     width: 100%; 
@@ -247,7 +239,6 @@ h1, h2 {
 main {
     padding: 20px;
     text-align: center;
-    min-height: 75vh;
 }
 
 
